@@ -1,0 +1,256 @@
+{
+  "verified_at": "2026-09-22",
+  "timezone": "Asia/Shanghai",
+  "scope": "Source audit and generated SQL structural checks; database import is not included.",
+  "baseline": {
+    "project": "ruoyi-vue-pro",
+    "revision": "2026.08-jdk25-SNAPSHOT",
+    "java_version": "25",
+    "spring_boot_root": "4.1.0",
+    "spring_boot_bom": "4.1.1",
+    "dependency": {
+      "name": "simple-ddl-parser",
+      "validated_version": "1.13.0",
+      "source_pins_version": false
+    }
+  },
+  "files": {
+    "sql/tools/convertor.py": "985cbc60c37b5aa72955f51bfdc685782e9960a18f87a644597e155d7f7dd978",
+    "sql/tools/README.md": "f020a3cddfa08045eb5d1b17b16ae4234dc97d262436bd37808fd31f6b21875b",
+    "pom.xml": "b0d3f072a781e6785232e0bd98015dee02ae967b1befdd687a070bc31b5590b7",
+    "yudao-dependencies/pom.xml": "d71b53987b7c25fd97937999ffd88b6df767517439b83a5c1ed34598d6679c4c"
+  },
+  "paths_are_relative_to": "target backend project root",
+  "source_contract": {
+    "entrypoint": "sql/tools/convertor.py",
+    "arguments": "type [path]",
+    "targets": [
+      "postgres",
+      "oracle",
+      "sqlserver",
+      "dm8",
+      "kingbase",
+      "opengauss",
+      "highgo"
+    ],
+    "default_source_from_tools_working_directory": "../mysql/ruoyi-vue-pro.sql",
+    "encoding": "utf-8",
+    "sql_channel": "stdout",
+    "parse_diagnostics_channel": "stderr",
+    "partial_output_can_exit_zero": true
+  },
+  "observations": [
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        44,
+        77
+      ],
+      "fact": "Global text cleanup can alter string literals; removes charset/collation and index prefix lengths."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        84,
+        92
+      ],
+      "fact": "CREATE TABLE discovery uses a case-sensitive regex terminated by the first semicolon."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        212,
+        223
+      ],
+      "fact": "INSERT extraction matches a strict physical-line prefix and separator, not a SQL statement parser."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        225,
+        295
+      ],
+      "fact": "Index extraction normalizes columns/order; generated index names replace source names."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        298,
+        309
+      ],
+      "fact": "Column comments and table comments use different regexes; column escaped quotes can truncate."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        330,
+        395
+      ],
+      "fact": "Empty parser results are skipped and written to stderr without a nonzero exit; qrtz tables are skipped intentionally."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        362,
+        382
+      ],
+      "fact": "Only create, inferred id primary key, unique indexes, ordinary indexes, comments and inserts are emitted."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        398,
+        550
+      ],
+      "fact": "PostgreSQL mapping, DROP table/sequence, dual and last-INSERT-based sequence behavior."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        553,
+        689
+      ],
+      "fact": "Oracle mapping, relaxed text nullability, date-literal conversion and sequence behavior."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        692,
+        862
+      ],
+      "fact": "SQL Server mapping, forced id identity, GO batches, unicode text replacement and dual."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        865,
+        978
+      ],
+      "fact": "DM8 character-length varchar, forced id identity and identity-insert seed control."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        981,
+        1032
+      ],
+      "fact": "Kingbase and OpenGauss override PostgreSQL create behavior; HighGo inherits PostgreSQL behavior."
+    },
+    {
+      "file": "sql/tools/convertor.py",
+      "lines": [
+        1035,
+        1075
+      ],
+      "fact": "Seven targets, optional source path and stdout-only CLI contract."
+    },
+    {
+      "file": "sql/tools/README.md",
+      "lines": [
+        125,
+        152
+      ],
+      "fact": "Documents simple-ddl-parser installation and printing SQL for redirection; no pinned dependency version."
+    },
+    {
+      "file": "pom.xml",
+      "lines": [
+        43,
+        53
+      ],
+      "fact": "Root revision, Java and Spring Boot baseline."
+    },
+    {
+      "file": "yudao-dependencies/pom.xml",
+      "lines": [
+        17,
+        20
+      ],
+      "fact": "BOM revision and Spring Boot version."
+    }
+  ],
+  "audit_checks": {
+    "method": "Executed exact source functions extracted with Python AST against synthetic in-memory SQL; source project remained unchanged.",
+    "verified_cases": [
+      "multiline VALUES truncated",
+      "lowercase, indented and unquoted-table INSERT omitted",
+      "multiple INSERT statements on one line corrupted",
+      "charset and ENGINE phrases inside string literals altered",
+      "escaped single quote in column comment truncated",
+      "unsorted and multirow ids produce an incorrect original sequence start",
+      "SQL Server first string value produces malformed unicode prefix",
+      "unsupported char type raises only on PostgreSQL/HighGo and emits None on other targets"
+    ],
+    "target_database_import_tested": false
+  },
+  "wrapper_contract": {
+    "plugin_relative_entrypoint": "scripts/convert_sql.py",
+    "source_converter_policy": "Execute the current target project's converter, not a vendored copy.",
+    "result_status": "generated_only",
+    "failure_status": "failed",
+    "database_validation": "not_run",
+    "report_suffix": ".sql.report.json",
+    "stderr_suffix": ".sql.stderr.log",
+    "default_timeout_seconds": 300,
+    "sequence_start_policy": "max(0, maximum supported seed id) + 1",
+    "parser_logging_policy": "Disable INFO and lower levels in the converter subprocess; preserve WARNING/ERROR and direct stderr diagnostics.",
+    "early_path_failures_can_omit_report": true,
+    "checks": "Object inventory, INSERT statement counts, known unsupported input forms and sequence adjustment; not full SQL syntax or semantic equivalence validation.",
+    "report_fields": [
+      "status",
+      "target",
+      "source_name",
+      "source_sha256",
+      "converter_sha256",
+      "database_validation",
+      "errors",
+      "warnings",
+      "tables",
+      "source_insert_statements",
+      "quartz_tables_skipped",
+      "source_session_or_drop_statements_ignored",
+      "simple_ddl_parser_version",
+      "converter_exit_code",
+      "diagnostic_file",
+      "sequence_adjustments",
+      "destructive_statements",
+      "output_sha256",
+      "output_file"
+    ],
+    "destructive_statements_meaning": "Count of DROP TABLE and DROP SEQUENCE statements only.",
+    "database_verified": false
+  },
+  "conversion_acceptance": {
+    "verified_at": "2026-09-22",
+    "parser_version": "1.13.0",
+    "targets": [
+      "postgres",
+      "oracle",
+      "sqlserver",
+      "dm8",
+      "kingbase",
+      "opengauss",
+      "highgo"
+    ],
+    "sample": {
+      "fixture": "tests/fixtures/mysql_conversion.sql",
+      "business_tables": 1,
+      "insert_statements": 2,
+      "quartz_tables_skipped": [
+        "qrtz_demo"
+      ],
+      "sequence_start_corrected_from": 3,
+      "sequence_start_corrected_to": 21,
+      "passed_targets": 7
+    },
+    "project_source": {
+      "path": "sql/mysql/ruoyi-vue-pro.sql",
+      "sha256": "90d9445a987f83bbcd70474a32061dd9dcd48fa775118c71643d8e9a8d7b3593",
+      "business_tables": 48,
+      "insert_statements": 5588,
+      "passed_targets": 7
+    },
+    "database_validation": "not_run",
+    "reproduction": "tests/verify_sql_targets.py --project-root <project> --output-dir <new-directory> --with-project-source"
+  }
+}

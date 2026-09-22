@@ -4,6 +4,8 @@
 
 已核验源码基线的 `sql/mysql/ruoyi-vue-pro.sql` 是 MySQL 初始化脚本，`sql/postgresql`、`sql/oracle`、`sql/sqlserver`、`sql/dm` 等有各自文件。目标环境的数据库类型、已有 schema、数据与版本必须另核；不能把基线文件当成当前线上状态。`sql/tools/convertor.py` 是转换工具，转换结果仍需按目标方言校验。
 
+SQL 文件格式转换使用[专用技能](../skills/yudao-sql-convert/SKILL.md)：执行项目中的转换器，保留新输出与 `.sql.report.json`，核对源表/数据语句、解析错误和序列。七种目标的实际支持范围见[方言说明](../skills/yudao-sql-convert/references/dialects.md)。文件生成完成后，目标数据库导入和业务验收是独立步骤。
+
 ## 可审查的增量流程
 
 1. 对目标库和目标版本生成结构/数据差异，按模块收缩范围，标出新增、修改、删除与索引变化。

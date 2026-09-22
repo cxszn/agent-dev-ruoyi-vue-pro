@@ -4,6 +4,8 @@
 
 已收录的官网主题导航见[文档分组索引](docs-index.md)，机器可查询记录见[docs-index.json](docs-index.json)。目录标题、已知 URL、正文阅读状态与源码核验是不同证据；本轮 Chrome 连接受阻，保留明确的 URL 待定位和正文未读状态。各专题技能的 `references/workflow.md` 补充了实际源码入口、版本差异和代表测试边界。
 
+数据库转换技能另按用户提供的项目 `sql/tools` 核验，转换器的来源指纹、CLI 和方言差异记录在[转换证据](../skills/yudao-sql-convert/references/source-evidence.json)与[方言说明](../skills/yudao-sql-convert/references/dialects.md)，使用时优先核对目标项目的实际工具版本。
+
 ## 已核验源码基线
 
 | 范围 | 根目录相对路径及定位 | 已核实事实 |

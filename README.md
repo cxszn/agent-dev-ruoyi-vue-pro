@@ -1,6 +1,6 @@
 # dev-ruoyi-vue-pro
 
-面向 Codex 的芋道 `ruoyi-vue-pro` 开发插件。提供 17 项任务技能、6 份 Agent 配置模板，以及按官网主题组织的文档导航和源码定位，覆盖从启动、功能开发到迁移与运维的工作流程。
+面向 Codex 的芋道 `ruoyi-vue-pro` 开发插件。提供 18 项任务技能、7 份 Agent 配置模板，以及按官网主题组织的文档导航和源码定位，覆盖从启动、功能开发到迁移与运维的工作流程。
 
 ## 使用
 
@@ -20,6 +20,7 @@
 | [yudao-delete-tenant](skills/yudao-delete-tenant/SKILL.md) | 多租户关闭或移除、数据语义与业务行为保护 |
 | [yudao-frontend](skills/yudao-frontend/SKILL.md) | 管理后台页面、菜单、API 调用和联调 |
 | [yudao-database](skills/yudao-database/SKILL.md) | SQL、表结构、数据升级及多数据库方言 |
+| [yudao-sql-convert](skills/yudao-sql-convert/SKILL.md) | 自动执行 MySQL SQL 到七种目标数据库的格式转换与检查 |
 | [yudao-integration](skills/yudao-integration/SKILL.md) | 文件、通知、OAuth、Excel、日志等基础能力集成 |
 | [yudao-async](skills/yudao-async/SKILL.md) | 定时任务、MQ、缓存、锁、幂等与限流 |
 | [yudao-workflow](skills/yudao-workflow/SKILL.md) | BPM 流程定义、表单、审批任务与业务回写 |
@@ -58,7 +59,9 @@ python scripts/check_sources.py --root "<项目根目录>"
 
 ## Agent 与维护
 
-六个角色分别负责来源核查、功能实现、验证执行、迁移规划、资料维护和变更审查，职责及输入输出见[分工约定](references/agent-workflow.md)。`agent-templates/` 中的 TOML 需放到 Codex 的个人 `~/.codex/agents/` 或项目 `.codex/agents/`；复制前核对同名配置，模型与推理设置默认继承。技能的 `agents/openai.yaml` 仅用于技能展示，不会注册子 Agent。
+七个角色分别负责来源核查、功能实现、验证执行、迁移规划、SQL 转换、资料维护和变更审查，职责及输入输出见[分工约定](references/agent-workflow.md)。`agent-templates/` 中的 TOML 需放到 Codex 的个人 `~/.codex/agents/` 或项目 `.codex/agents/`；复制前核对同名配置，模型与推理设置默认继承。技能的 `agents/openai.yaml` 仅用于技能展示，不会注册子 Agent。
+
+例如可直接提出：`使用 $dev-ruoyi-vue-pro:yudao-sql-convert，把当前项目的 MySQL 初始化 SQL 转成达梦格式，并交付 SQL 和检查报告。` 技能会识别项目的 `sql/tools/convertor.py`，准备隔离依赖并运行包装器。支持 PostgreSQL、Oracle、SQL Server、DM8、Kingbase、OpenGauss、HighGo；输出标记为 `generated_only`，目标数据库导入仍需验证。参数、格式限制和方言差异见[转换技能](skills/yudao-sql-convert/SKILL.md)。
 
 租户移除技能由已有 `yudao-delete-tenant` 导入并重新核验，保留了来源指纹，修正了固定菜单 ID 与当前业务冲突、关闭隔离后的数据可见性、lambda 返回和异常语义等问题；详见[导入来源与差异](skills/yudao-delete-tenant/references/sources.md)。
 
