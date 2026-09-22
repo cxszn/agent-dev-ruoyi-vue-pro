@@ -1,0 +1,4 @@
+interface:
+  display_name: "芋道任务入口"
+  short_description: "按源码版本与任务类型定位芋道工作资料"
+  default_prompt: "使用 $dev-ruoyi-vue-pro:yudao-router，先核对版本和任务范围，再处理这项芋道任务。"

@@ -1,0 +1,53 @@
+{
+  "verified_at": "2026-09-22",
+  "baseline": {
+    "revision": "2026.08-jdk25-SNAPSHOT",
+    "java_version": "25",
+    "spring_boot_root": "4.1.0",
+    "spring_boot_bom": "4.1.1",
+    "modules": [
+      "yudao-dependencies",
+      "yudao-framework",
+      "yudao-server",
+      "yudao-module-system",
+      "yudao-module-infra"
+    ],
+    "vue3_package_json_present": false
+  },
+  "files": {
+    "pom.xml": "b0d3f072a781e6785232e0bd98015dee02ae967b1befdd687a070bc31b5590b7",
+    "yudao-dependencies/pom.xml": "d71b53987b7c25fd97937999ffd88b6df767517439b83a5c1ed34598d6679c4c",
+    "README.md": "7ef56586c26c6aa892fbb4d813f95672635186ac78afb3c3199c8faaa19694de",
+    "yudao-server/pom.xml": "337bc01dc573cc903a11083a4f53030b3fdf92ae2830f9fe7e4eaf1cf7daad88",
+    "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/user/UserController.java": "3dfdf1dad83dd46ff5848b9136e74ca7c62b30ee6a29177866c8b3946f315717",
+    "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/service/permission/PermissionServiceImpl.java": "927ac110285156fdb4f52b9dee7fe020672c54edc9f160a302bf19c6326abb61",
+    "sql/mysql/ruoyi-vue-pro.sql": "90d9445a987f83bbcd70474a32061dd9dcd48fa775118c71643d8e9a8d7b3593",
+    "yudao-ui/yudao-ui-admin-vue3/README.md": "a1a21f8c6917b87ad2c78f0c8ac48a48159f33f384f4f624c4c45ab1d9050092"
+  },
+  "trees": {
+    "sql": {"count": 29, "sha256": "b24bed5c6d18344ad6bbcb54369ffdfa374844969454dcd8374c637b33bca0a3"},
+    "yudao-dependencies": {"count": 1, "sha256": "7256525647faf1f7895cd89f36c80df8c2d99319756cb3c7612b2f24865404de"},
+    "yudao-framework": {"count": 427, "sha256": "d39c141cd3e7aba5725e7cc0d647f19c5e41166c0c46831615beba2119279635"},
+    "yudao-module-ai": {"count": 232, "sha256": "dd41b624e1acdf12f56b9ac8674420fee9790b401918d39d00e266d423e5e35f"},
+    "yudao-module-bpm": {"count": 251, "sha256": "cbf352ebbc262fe5985e7e8d955819ba4288b94608f449ba6a47396322618f17"},
+    "yudao-module-crm": {"count": 297, "sha256": "1e0f5f1153034dc6b4542c3e1def548a4ae5e74735ef11d82f90aabae990b8fd"},
+    "yudao-module-erp": {"count": 220, "sha256": "6b03eb23341d74bab4f484f6a371f52275c275cbeb99b5db705ead097dc22007"},
+    "yudao-module-fms": {"count": 291, "sha256": "0eab85221475aeb0e77dd9699f9c03d5d0a408cf4fab2889338f2dfae63826ed"},
+    "yudao-module-hrm": {"count": 633, "sha256": "503e243cd4771f1f9ac92bc4866545b23e65f6c203c162877457a1ed46947df2"},
+    "yudao-module-im": {"count": 305, "sha256": "75f4332eaf4bb922c6e85aa316ff0dfd5f8a54c97e80d6f996dfb1aea964eee9"},
+    "yudao-module-infra": {"count": 1244, "sha256": "34f664158e426e00f9cebd95641f088a4c431d5a55a0a170fd2772751a67069b"},
+    "yudao-module-iot": {"count": 483, "sha256": "92520cb0af30c1f0d6510b03c824ba9865cc7e964bf1ee778184670367c1cc9e"},
+    "yudao-module-mall": {"count": 888, "sha256": "688989cde014b61a0f42f426006311216bab0e9d13915904b21809f1d490e504"},
+    "yudao-module-member": {"count": 202, "sha256": "99be9c05ca4af3bb03f049fc660bee8b1d436478bbf30b072bd0951b59fa7e8d"},
+    "yudao-module-mes": {"count": 1156, "sha256": "c06073df36f848d5f1004299c63ad5ef4c200cbb1a081d3116e7c612aa156738"},
+    "yudao-module-mp": {"count": 134, "sha256": "909747b06527b9006d13312d6aa6dcdd64f2bce6d24f54a8dbb5e257685d75af"},
+    "yudao-module-oa": {"count": 489, "sha256": "2ed2bf419c5b6036d56bc556f02cd721c317bf6af09f60e26547637effa511eb"},
+    "yudao-module-pay": {"count": 247, "sha256": "5c5cb005b8b1b09b092e3bc74fa83540ea065b4393232e10a97b15e6d67661a9"},
+    "yudao-module-pms": {"count": 315, "sha256": "d8771de1aaa2c02a87dba7c43af49bc619c7aa90f08fe5768c2f88bca9c7873e"},
+    "yudao-module-report": {"count": 36, "sha256": "ebe07c7f98c74cdf54ca31ee4fbe515183fc166fd2229d249e2bfb10a6487e86"},
+    "yudao-module-system": {"count": 516, "sha256": "a43dc1a617d1f2dbef39c5e700a4a4e41d6e8108efecd0e9154325987d82927f"},
+    "yudao-module-wms": {"count": 165, "sha256": "5a2e70830d1b77fb53654371dcab7266ed09b378579c1d368d2ef2b674ba9ac2"},
+    "yudao-server": {"count": 9, "sha256": "03f5d259bf35765e9e533652e540916e43d5793d49e12556507d77e2e9217e46"},
+    "yudao-ui": {"count": 10, "sha256": "8527ec2011ac7e62127d3622d30b61257cbdd10ecac75ae714c9227b4c2d738a"}
+  }
+}
