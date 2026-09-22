@@ -1,0 +1,4 @@
+interface:
+  display_name: "芋道多租户移除"
+  short_description: "核对单租户数据语义、依赖与业务行为，规划或执行多租户功能移除"
+  default_prompt: "使用 $dev-ruoyi-vue-pro:yudao-delete-tenant 评估当前项目移除多租户的影响，保留必要业务逻辑并给出可验证的改造方案。"

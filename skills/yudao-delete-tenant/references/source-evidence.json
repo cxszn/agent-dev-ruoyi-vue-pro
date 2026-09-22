@@ -1,0 +1,29 @@
+{
+  "verified_at": "2026-09-22",
+  "timezone": "Asia/Shanghai",
+  "imported_skill": {
+    "project": "cxszn_xyyx",
+    "path": ".agents/skills/yudao-delete-tenant/SKILL.md",
+    "sha256": "b95617f85dde61162d282298ec86a57c59e1211beb9bf0d8b1159f7b2a610022"
+  },
+  "baseline": {
+    "project": "ruoyi-vue-pro",
+    "revision": "2026.08-jdk25-SNAPSHOT",
+    "java_version": "25",
+    "spring_boot_root": "4.1.0",
+    "spring_boot_bom": "4.1.1"
+  },
+  "files": {
+    "pom.xml": "b0d3f072a781e6785232e0bd98015dee02ae967b1befdd687a070bc31b5590b7",
+    "yudao-dependencies/pom.xml": "d71b53987b7c25fd97937999ffd88b6df767517439b83a5c1ed34598d6679c4c",
+    "sql/mysql/ruoyi-vue-pro.sql": "90d9445a987f83bbcd70474a32061dd9dcd48fa775118c71643d8e9a8d7b3593",
+    "yudao-framework/yudao-spring-boot-starter-biz-tenant/src/main/java/cn/iocoder/yudao/framework/tenant/config/YudaoTenantAutoConfiguration.java": "48ab1b6c48ed6dc955dc50aac4562fd2f1d2c0065e51a1491cda54d29d463189",
+    "yudao-framework/yudao-spring-boot-starter-biz-tenant/src/main/java/cn/iocoder/yudao/framework/tenant/core/util/TenantUtils.java": "f447ee06da13643d8921d7b1ba9245235d5fb830a18e4e7bb4e41b1c98783c6b",
+    "yudao-framework/yudao-spring-boot-starter-biz-tenant/src/main/java/cn/iocoder/yudao/framework/tenant/core/db/TenantDatabaseInterceptor.java": "68e1727dbab68288395a0d26043e1b474e84515ccd8792cc4b850aa2d5dcf716",
+    "yudao-framework/yudao-spring-boot-starter-biz-tenant/src/main/java/cn/iocoder/yudao/framework/tenant/core/db/TenantBaseDO.java": "a8b2ce1195b61f4ff779df105ac5fedf48efdb34a020ce9aabde524a930772f1",
+    "yudao-framework/yudao-spring-boot-starter-biz-tenant/src/main/java/cn/iocoder/yudao/framework/tenant/core/job/TenantJobAspect.java": "42f9c78b75aa7d76a553b428286d913c2c69e0e93801ba072b9735fd2e4710c6",
+    "yudao-module-iot/yudao-module-iot-biz/pom.xml": "aa6619dba99cbaf24587613e72ba081a4578a01fef48ff7314f05a7ae8f9d3b9",
+    "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/service/oauth2/OAuth2TokenServiceImpl.java": "b7636d793b9d8364aea726ce9aab37e3b21cc6ca48c040e62e3a1acec13246fa",
+    "yudao-ui/yudao-ui-admin-vue3/README.md": "a1a21f8c6917b87ad2c78f0c8ac48a48159f33f384f4f624c4c45ab1d9050092"
+  }
+}

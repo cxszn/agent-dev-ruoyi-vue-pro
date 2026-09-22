@@ -16,7 +16,9 @@
 
 ## 更新与验证
 
-仅改受影响的 `references/*.md`、技能与指纹清单，记录核验日期和适用版本；保留旧来源的差异说明直到完成针对性复核。运行 `skill-creator/scripts/quick_validate.py` 检查每个技能，`plugin-creator/scripts/validate_plugin.py` 检查插件，再核内部链接、来源相对路径和两类代表任务的路由。
+仅改受影响的资料、技能与指纹清单，记录核验日期和适用版本；保留旧来源的差异说明直到完成针对性复核。官网目录变更写入 `references/docs-index.json`，以分组/标题和已知 URL 定位对应记录，分别更新链接来源和正文状态；未访问的正文保持 `not-read`。随后运行 `python scripts/docs_index.py check --source-root "<项目根目录>"` 与 `python scripts/docs_index.py render`，更新 [docs-index.md](docs-index.md)。
+
+运行 `skill-creator/scripts/quick_validate.py` 检查每个技能，`plugin-creator/scripts/validate_plugin.py` 检查插件，再核内部链接、来源相对路径和代表任务的路由。对多租户移除至少推演“多个租户存在同名账号”和“lambda 内 return 后还有外围业务”的行为；模拟结果不能代替实际迁移或编译验证。
 
 插件已经安装到 Codex 后，使用 `plugin-creator/scripts/update_plugin_cachebuster.py <插件路径>` 更新本地缓存标识，再用个人 marketplace 名称执行 `codex plugin add dev-ruoyi-vue-pro@personal`。验证 `codex plugin list` 的安装状态；新任务加载更新后的技能。不要手改插件缓存或建立定时任务。
 
