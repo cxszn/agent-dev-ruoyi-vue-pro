@@ -1,9 +1,7 @@
 {
   "format_version": 1,
   "source_bundle": "yudao-skills_v1.1.0",
-  "source_author": "闲鱼号---爱唱歌的皇阿玛",
   "source_declared_baseline": "2026.05-SNAPSHOT (yudao-cloud)",
-  "source_use_notice": "Personal learning and enterprise commercial use only; source prohibits resale, redistribution and public dissemination. Local adaptation does not grant redistribution rights.",
   "source_files": [
     {
       "path": "yudao-system/SKILL.md",
@@ -172,13 +170,5 @@
         "sha256": "b85c23a8bd35377a26338a821374f2528553274b0765d2723f34057fab8f4014"
       }
     ]
-  },
-  "publication_confirmation": {
-    "status": "user_confirmed",
-    "confirmed_at": "2026-09-23",
-    "confirmed_by": "user",
-    "repository": "https://github.com/cxszn/agent-dev-ruoyi-vue-pro",
-    "scope": "Publication of this plugin integration and its adapted source materials",
-    "basis": "User replied 允许 after being asked to confirm authorization for publication to this repository."
   }
 }

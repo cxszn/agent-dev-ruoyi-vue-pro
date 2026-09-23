@@ -11,8 +11,6 @@
 | `yudao-codegen/references/ref-menu-sql.md` | `740393a608e2e98b9eccea04a4f11f5bd1af4ea8ce47223a3cfd548c5619a896` | 菜单计划、字段、权限链与 SQL/API 应用检查。 |
 | `yudao-codegen/docs/skill-usage-guide.md` | `11a97900d33d258ebcb254e8262cbbff5875eee4b9a78bfb13249c32393c57f7` | 自然语言、已有表、增量字段三类用法与交付验收。 |
 
-来源署名为“闲鱼号---爱唱歌的皇阿玛”。来源声明限个人学习与企业商用，并禁止二次倒卖、转售、复制分发、公开传播。用户于 2026-09-23 确认允许本次整合内容发布到 `cxszn/agent-dev-ruoyi-vue-pro`；保留原始声明，不将本次确认扩展为其它再分发许可。
-
 ## 与当前源码的适用性变化
 
 源码核验基线为 `2026.08-jdk25-SNAPSHOT`。各参考页使用仓库相对路径，结论来自源码和测试文件阅读；API、数据库与前端的运行验收仍需在目标项目中完成。
