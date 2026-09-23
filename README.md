@@ -71,9 +71,3 @@ python scripts/check_sources.py --root "<项目根目录>"
 租户移除技能由已有 `yudao-delete-tenant` 导入并重新核验，保留了来源指纹，修正了固定菜单 ID 与当前业务冲突、关闭隔离后的数据可见性、lambda 返回和异常语义等问题；详见[导入来源与差异](skills/yudao-delete-tenant/references/sources.md)。
 
 后续任务按[任务与调整模板](references/task-template.md)描述目标、范围和验收。资料与插件的增量更新步骤见[维护流程](references/upgrade.md)。
-
-## 导入技能包
-
-已整合 `yudao-skills_v1.1.0`：新增 `yudao-system`，并将同名 `yudao-codegen` 的适用流程增量合并到现有技能。来源基于 `yudao-cloud 2026.05-SNAPSHOT`，已按当前单体项目核对结构、API 与生成器约定；原始文件身份和指纹见[导入清单](references/imports/yudao-skills-v1.1.0.json)。
-
-该来源由“爱唱歌的皇阿玛”提供，随附声明允许个人学习与企业商用、禁止复制分发和公开传播。用户于 2026-09-23 确认允许将本次整合内容发布到 `cxszn/agent-dev-ruoyi-vue-pro`；确认范围记录在导入清单中，来源署名与原始使用声明予以保留。
