@@ -1,4 +1,4 @@
 interface:
   display_name: "芋道 SQL 转换"
-  short_description: "执行 MySQL 初始化脚本到七种目标方言的转换并生成完整性报告"
-  default_prompt: "使用 $yudao-sql-convert 把当前芋道项目的 MySQL 初始化 SQL 转成指定目标数据库脚本，并交付新文件与转换报告。"
+  short_description: "执行 MySQL 到七种数据库的 SQL 转换，按 PostgreSQL 目标版本适配并报告"
+  default_prompt: "使用 $yudao-sql-convert 把当前芋道项目的 MySQL 初始化 SQL 转成 PostgreSQL 16 脚本，并交付新文件与转换报告。"

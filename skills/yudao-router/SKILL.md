@@ -21,7 +21,7 @@ description: 为芋道 ruoyi-vue-pro 的启动、代码生成、权限、多租�
 | 关闭或移除多租户功能 | [yudao-delete-tenant](../yudao-delete-tenant/SKILL.md) | 先确定数据范围和合并语义 |
 | Vue、Vben、uni-app 页面和联调 | [yudao-frontend](../yudao-frontend/SKILL.md) | 具体前端工程与后端契约 |
 | 表结构、SQL、查询和方言 | [yudao-database](../yudao-database/SKILL.md) | 数据保留、迁移和权限条件 |
-| MySQL SQL 转 PostgreSQL/Oracle/SQL Server/达梦/金仓/OpenGauss/瀚高 | [yudao-sql-convert](../yudao-sql-convert/SKILL.md) | 执行转换、检查完整性、生成 SQL 与报告 |
+| MySQL SQL 转 PostgreSQL（按 PG16 等目标版本）/Oracle/SQL Server/达梦/金仓/OpenGauss/瀚高 | [yudao-sql-convert](../yudao-sql-convert/SKILL.md) | 确定目标版本、执行转换、检查完整性、生成 SQL 与报告 |
 | 文件、短信邮件、OAuth、Excel、日志 | [yudao-integration](../yudao-integration/SKILL.md) | 外部调用与真实交付边界 |
 | Job、MQ、缓存、锁、幂等、限流 | [yudao-async](../yudao-async/SKILL.md) | 重试、上下文、并发与副作用 |
 | BPM、审批、流程表单与业务表单 | [yudao-workflow](../yudao-workflow/SKILL.md) | 定义、实例、任务状态与操作者 |

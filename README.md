@@ -21,7 +21,7 @@
 | [yudao-delete-tenant](skills/yudao-delete-tenant/SKILL.md) | 多租户关闭或移除、数据语义与业务行为保护 |
 | [yudao-frontend](skills/yudao-frontend/SKILL.md) | 管理后台页面、菜单、API 调用和联调 |
 | [yudao-database](skills/yudao-database/SKILL.md) | SQL、表结构、数据升级及多数据库方言 |
-| [yudao-sql-convert](skills/yudao-sql-convert/SKILL.md) | 自动执行 MySQL SQL 到七种目标数据库的格式转换与检查 |
+| [yudao-sql-convert](skills/yudao-sql-convert/SKILL.md) | 自动执行 MySQL SQL 到七种数据库的转换与检查，按指定 PostgreSQL 版本适配 |
 | [yudao-integration](skills/yudao-integration/SKILL.md) | 文件、通知、OAuth、Excel、日志等基础能力集成 |
 | [yudao-async](skills/yudao-async/SKILL.md) | 定时任务、MQ、缓存、锁、幂等与限流 |
 | [yudao-workflow](skills/yudao-workflow/SKILL.md) | BPM 流程定义、表单、审批任务与业务回写 |
@@ -67,6 +67,8 @@ python scripts/check_sources.py --root "<项目根目录>"
 七个角色分别负责来源核查、功能实现、验证执行、迁移规划、SQL 转换、资料维护和变更审查，职责及输入输出见[分工约定](references/agent-workflow.md)。`agent-templates/` 中的 TOML 需放到 Codex 的个人 `~/.codex/agents/` 或项目 `.codex/agents/`；复制前核对同名配置，模型与推理设置默认继承。技能的 `agents/openai.yaml` 仅用于技能展示，不会注册子 Agent。
 
 例如可直接提出：`使用 $dev-ruoyi-vue-pro:yudao-sql-convert，把当前项目的 MySQL 初始化 SQL 转成达梦格式，并交付 SQL 和检查报告。` 技能会识别项目的 `sql/tools/convertor.py`，准备隔离依赖并运行包装器。支持 PostgreSQL、Oracle、SQL Server、DM8、Kingbase、OpenGauss、HighGo；输出标记为 `generated_only`，目标数据库导入仍需验证。参数、格式限制和方言差异见[转换技能](skills/yudao-sql-convert/SKILL.md)。
+
+PostgreSQL 可直接说“数据库是 PG16，按这个版本转换”，对应 `--target postgres --target-version 16`。支持 PG9.4–9.6、PG10–18：旧版使用序列与默认值，PG10 及以上默认使用允许显式 ID 的身份列，并保留芋道的 `<表名>_seq` 名称。需要独立序列时加 `--pg-id-strategy sequence`。输出文件名与报告均标注目标版本。
 
 租户移除技能由已有 `yudao-delete-tenant` 导入并重新核验，保留了来源指纹，修正了固定菜单 ID 与当前业务冲突、关闭隔离后的数据可见性、lambda 返回和异常语义等问题；详见[导入来源与差异](skills/yudao-delete-tenant/references/sources.md)。
 

@@ -215,7 +215,11 @@
       "sequence_adjustments",
       "destructive_statements",
       "output_sha256",
-      "output_file"
+      "output_file",
+      "requested_target_version",
+      "target_version",
+      "postgres_id_strategy",
+      "postgres_adaptations"
     ],
     "destructive_statements_meaning": "Count of DROP TABLE and DROP SEQUENCE statements only.",
     "database_verified": false
@@ -252,5 +256,56 @@
     },
     "database_validation": "not_run",
     "reproduction": "tests/verify_sql_targets.py --project-root <project> --output-dir <new-directory> --with-project-source"
+  },
+  "postgres_version_adaptation": {
+    "verified_at": "2026-09-24",
+    "supported_versions": [
+      "9.4",
+      "9.5",
+      "9.6",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "version_option": "--target-version (alias --pg-version); required for native postgres",
+    "default_output": "sql/converted/<source-stem>.postgres<major-version>.sql",
+    "default_id_strategy": {
+      "9.4-9.6": "sequence_default_owned_by",
+      "10-18": "identity_by_default_named_sequence"
+    },
+    "sequence_name": "<table>_seq",
+    "source_converter_changed": false,
+    "official_sources": [
+      "https://www.postgresql.org/docs/16/datatype.html",
+      "https://www.postgresql.org/docs/16/sql-createtable.html",
+      "https://www.postgresql.org/docs/10/sql-createtable.html",
+      "https://github.com/postgres/postgres/blob/REL_10_STABLE/src/backend/parser/gram.y#L4092",
+      "https://www.postgresql.org/docs/9.6/sql-createtable.html",
+      "https://www.postgresql.org/docs/9.6/sql-createsequence.html"
+    ],
+    "acceptance": {
+      "generated_cases": 38,
+      "passed_cases": 38,
+      "sample_tables": 1,
+      "sample_inserts": 2,
+      "project_tables": 48,
+      "project_inserts": 5588,
+      "simple_ddl_parser_version": "1.13.0",
+      "pg16_syntax_parser": {
+        "package": "pglast",
+        "version": "6.16",
+        "postgresql_parser_version": "16.1",
+        "passed_cases": 4
+      },
+      "other_pg_versions": "Generated output and version/strategy checks only; not parsed by their server versions",
+      "database_validation": "not_run",
+      "reproduction": "uv run --no-project --python 3.11 --with simple-ddl-parser==1.13.0 --with pglast==6.16 python -B tests/verify_sql_targets.py --project-root <project> --output-dir <new-directory> --with-project-source --pg16-syntax-check"
+    }
   }
 }

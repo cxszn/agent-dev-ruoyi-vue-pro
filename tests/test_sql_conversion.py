@@ -98,13 +98,14 @@ class ConversionSafetyTests(unittest.TestCase):
             (project / "sql/mysql/ruoyi-vue-pro.sql").write_text(DDL, encoding="utf-8")
             (project / "sql/tools/convertor.py").write_text(
                 "import sys\nprint('partial SQL')\nprint('parse failed', file=sys.stderr)\n", encoding="utf-8")
-            args = argparse.Namespace(project_root=project, target="postgres", source=None, output=None, timeout=30)
+            args = argparse.Namespace(project_root=project, target="postgres", target_version="16",
+                                      source=None, output=None, timeout=30)
             with patch.object(MODULE.importlib.metadata, "version", return_value="test"):
                 report, path = MODULE.convert(args)
             self.assertEqual(report["status"], "failed")
             self.assertEqual(report["converter_exit_code"], 0)
             self.assertTrue(path.is_file())
-            self.assertFalse((project / "sql/converted/ruoyi-vue-pro.postgres.sql").exists())
+            self.assertFalse((project / "sql/converted/ruoyi-vue-pro.postgres16.sql").exists())
             self.assertEqual(json.loads(path.read_text(encoding="utf-8"))["status"], "failed")
 
     def test_existing_input_and_output_are_preserved(self):
@@ -116,7 +117,7 @@ class ConversionSafetyTests(unittest.TestCase):
             (project / "sql/tools/convertor.py").write_text("", encoding="utf-8")
             for destination in (source, project / "existing.sql"):
                 destination.write_text(DDL, encoding="utf-8")
-                args = argparse.Namespace(project_root=project, target="postgres", source=source,
+                args = argparse.Namespace(project_root=project, target="postgres", target_version="16", source=source,
                                           output=destination, timeout=30)
                 with self.assertRaises(ValueError):
                     MODULE.convert(args)
