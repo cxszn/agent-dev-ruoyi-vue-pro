@@ -6,6 +6,8 @@
 
 数据库转换技能另按用户提供的项目 `sql/tools` 核验，转换器的来源指纹、CLI 和方言差异记录在[转换证据](../skills/yudao-sql-convert/references/source-evidence.json)与[方言说明](../skills/yudao-sql-convert/references/dialects.md)，使用时优先核对目标项目的实际工具版本。
 
+第三方技能包 `yudao-skills_v1.1.0` 的来源版本、12 个文件指纹、合并方式与使用声明见[导入清单](imports/yudao-skills-v1.1.0.json)。其原始 cloud 项目假设和当前 ruoyi-vue-pro 核验结论分别记录，来源描述不自动成为目标项目的事实或操作授权。
+
 ## 已核验源码基线
 
 | 范围 | 根目录相对路径及定位 | 已核实事实 |

@@ -13,6 +13,7 @@ description: 为芋道 ruoyi-vue-pro 的启动、代码生成、权限、多租�
 | --- | --- | --- |
 | 初次启动、版本、模块装配 | [yudao-bootstrap](../yudao-bootstrap/SKILL.md) | POM、依赖与环境是否一致 |
 | 新模块、单表/树表/主子表/移动端生成 | [yudao-codegen](../yudao-codegen/SKILL.md) | 生成范围、模板类型、合并与回归 |
+| 运行中系统的角色、用户、部门、岗位、字典和菜单查询/创建 | [yudao-system](../yudao-system/SKILL.md) | 先查后建；查询与实际写入按任务授权区分 |
 | 已有 Java API、Service、Mapper | [yudao-backend](../yudao-backend/SKILL.md) | 请求到数据的最小改动 |
 | Token、角色菜单、数据权限、租户隔离 | [yudao-security](../yudao-security/SKILL.md) | 功能权限与数据过滤分别验证 |
 | 关闭或移除多租户功能 | [yudao-delete-tenant](../yudao-delete-tenant/SKILL.md) | 先确定数据范围和合并语义 |

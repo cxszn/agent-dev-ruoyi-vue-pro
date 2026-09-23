@@ -23,3 +23,5 @@
 插件已经安装到 Codex 后，使用 `plugin-creator/scripts/update_plugin_cachebuster.py <插件路径>` 更新本地缓存标识，再用个人 marketplace 名称执行 `codex plugin add dev-ruoyi-vue-pro@personal`。验证 `codex plugin list` 的安装状态；新任务加载更新后的技能。不要手改插件缓存或建立定时任务。
 
 维护前通过 `codex plugin list --marketplace personal --json` 确认插件源码位置，再修改源码并重新安装。`agent-templates/` 改动后需同步到实际使用的个人或项目 Agent 配置目录，并核验名称唯一性。
+
+外部技能包的更新先比较 `references/imports/` 中的来源指纹和随附使用声明，再按技能职责合并同名内容；保留当前项目已核验的约定。API、凭据、权限写入、生成结果覆盖和再分发范围有差异时，明确处理差异后再安装或发布。本机导入不自动扩大对外分享授权。

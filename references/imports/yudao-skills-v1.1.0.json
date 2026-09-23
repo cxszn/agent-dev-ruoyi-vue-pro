@@ -1,0 +1,98 @@
+{
+  "source_package": "yudao-skills_v1.1.0",
+  "package_version": "1.1.0",
+  "package_release_date": "2026-06-24",
+  "imported_at": "2026-09-22",
+  "upstream_baseline": {
+    "project": "yudao-cloud",
+    "revision": "2026.05-SNAPSHOT"
+  },
+  "target_baseline": {
+    "project": "ruoyi-vue-pro",
+    "revision": "2026.08-jdk25-SNAPSHOT"
+  },
+  "author_attribution": "闲鱼号：爱唱歌的皇阿玛",
+  "usage_notice": {
+    "source": "README.md",
+    "summary": "来源声明仅限个人学习与企业商用，禁止二次倒卖、转售、复制分发、公开传播。",
+    "public_redistribution_authorization": "user_confirmed",
+    "integration_scope": "local_use_and_named_repository_publication"
+  },
+  "integration": [
+    {
+      "source": "yudao-system/",
+      "target": "skills/yudao-system/",
+      "mode": "adapted_import",
+      "notes": "按当前后端API核验；完善认证、分页、失败语义与显式写入边界。"
+    },
+    {
+      "source": "yudao-codegen/",
+      "target": "skills/yudao-codegen/",
+      "mode": "incremental_merge",
+      "notes": "保留现有技能，合并任务流程与按需参考，核对云版和单体版差异。"
+    },
+    {
+      "source": "README.md, 使用说明.md, 使用教程.md",
+      "mode": "context_only",
+      "notes": "使用说明用于识别范围、来源与许可；营销内容、第三方工具全局配置和内嵌图片不加入可执行技能。"
+    }
+  ],
+  "files": {
+    ".gitignore": {
+      "sha256": "cda2160b64be172438fd705052b2cc8b98068364b23beb0f9646abbf2a7fea0c",
+      "bytes": 117
+    },
+    "README.md": {
+      "sha256": "6794a59f3ba4339abe00eeb8e030cbf87c0c69881a1ff7d005c78197c443fbc8",
+      "bytes": 96332
+    },
+    "yudao-codegen/codegen-reference.md": {
+      "sha256": "f3579c2dc012e5cf8ed53054994f3539a91e3056fd090adadb1fdb1f50c41d4b",
+      "bytes": 47014
+    },
+    "yudao-codegen/docs/skill-usage-guide.md": {
+      "sha256": "11a97900d33d258ebcb254e8262cbbff5875eee4b9a78bfb13249c32393c57f7",
+      "bytes": 10602
+    },
+    "yudao-codegen/references/ref-menu-sql.md": {
+      "sha256": "740393a608e2e98b9eccea04a4f11f5bd1af4ea8ce47223a3cfd548c5619a896",
+      "bytes": 11265
+    },
+    "yudao-codegen/SKILL.md": {
+      "sha256": "2e5465e35ee18a00aaa5feb15df2112b894c519bbd43a1b2a78b13794f913393",
+      "bytes": 23367
+    },
+    "yudao-system/references/api-reference.md": {
+      "sha256": "b744c39b8ecd776133ee0e49c3d40c618b7229a8e98c2926dff4dd6c21532cfa",
+      "bytes": 17461
+    },
+    "yudao-system/scripts/system_creator.py": {
+      "sha256": "e8c3042aa4a38fdfee939b80d3f4848f4d22730bcf04b08b023a09049c158d2e",
+      "bytes": 11234
+    },
+    "yudao-system/scripts/system_utils.py": {
+      "sha256": "3be6a060dea0f38b743e319e767943910405573c02a82a2ddb1a7823c55dc63c",
+      "bytes": 16415
+    },
+    "yudao-system/SKILL.md": {
+      "sha256": "94804f1f83be4e394052926f3fc6f803214f7f7aa560c89c6fffcef752a985d7",
+      "bytes": 28139
+    },
+    "使用教程.md": {
+      "sha256": "38e63013466b8a9e9aaeef32616d82229c6dc81705c64f72f4a774315816c752",
+      "bytes": 559240
+    },
+    "使用说明.md": {
+      "sha256": "65731bc4997cd1eb1425fa851b21210c376980a3bf152829727dc691311b01fb",
+      "bytes": 110155
+    }
+  },
+  "publication_confirmation": {
+    "status": "user_confirmed",
+    "confirmed_at": "2026-09-23",
+    "confirmed_by": "user",
+    "repository": "https://github.com/cxszn/agent-dev-ruoyi-vue-pro",
+    "scope": "Publication of this plugin integration and its adapted source materials",
+    "basis": "User replied 允许 after being asked to confirm authorization for publication to this repository."
+  }
+}

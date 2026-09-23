@@ -1,0 +1,184 @@
+{
+  "format_version": 1,
+  "source_bundle": "yudao-skills_v1.1.0",
+  "source_author": "闲鱼号---爱唱歌的皇阿玛",
+  "source_declared_baseline": "2026.05-SNAPSHOT (yudao-cloud)",
+  "source_use_notice": "Personal learning and enterprise commercial use only; source prohibits resale, redistribution and public dissemination. Local adaptation does not grant redistribution rights.",
+  "source_files": [
+    {
+      "path": "yudao-system/SKILL.md",
+      "bytes": 28139,
+      "sha256": "94804f1f83be4e394052926f3fc6f803214f7f7aa560c89c6fffcef752a985d7"
+    },
+    {
+      "path": "yudao-system/scripts/system_utils.py",
+      "bytes": 16415,
+      "sha256": "3be6a060dea0f38b743e319e767943910405573c02a82a2ddb1a7823c55dc63c"
+    },
+    {
+      "path": "yudao-system/scripts/system_creator.py",
+      "bytes": 11234,
+      "sha256": "e8c3042aa4a38fdfee939b80d3f4848f4d22730bcf04b08b023a09049c158d2e"
+    },
+    {
+      "path": "yudao-system/references/api-reference.md",
+      "bytes": 17461,
+      "sha256": "b744c39b8ecd776133ee0e49c3d40c618b7229a8e98c2926dff4dd6c21532cfa"
+    },
+    {
+      "path": "README.md",
+      "bytes": 96332,
+      "sha256": "6794a59f3ba4339abe00eeb8e030cbf87c0c69881a1ff7d005c78197c443fbc8"
+    },
+    {
+      "path": "使用说明.md",
+      "bytes": 110155,
+      "sha256": "65731bc4997cd1eb1425fa851b21210c376980a3bf152829727dc691311b01fb"
+    },
+    {
+      "path": "使用教程.md",
+      "bytes": 559240,
+      "sha256": "38e63013466b8a9e9aaeef32616d82229c6dc81705c64f72f4a774315816c752"
+    }
+  ],
+  "verification_snapshot": {
+    "identity": "ruoyi-vue-pro-master-jdk25",
+    "pom_revision": "2026.08-jdk25-SNAPSHOT",
+    "scope": "Read-only source contract verification; no live API or frontend acceptance",
+    "files": [
+      {
+        "path": "pom.xml",
+        "bytes": 7771,
+        "sha256": "b0d3f072a781e6785232e0bd98015dee02ae967b1befdd687a070bc31b5590b7"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/permission/RoleController.java",
+        "bytes": 4965,
+        "sha256": "5a0649e6aefa93514841c66e21c3bf5f1d1921b3d8ce631f9fe44c1e845ef259"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/permission/MenuController.java",
+        "bytes": 4292,
+        "sha256": "80f7f7b76def2ff066ce6cd210d26f0db4fbb80a36bae3d8101ae135212675b3"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/permission/PermissionController.java",
+        "bytes": 3721,
+        "sha256": "5911bceee24da4845f55886a358c856b4762fa7ab5dc675eb353ff5267f27049"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/user/UserController.java",
+        "bytes": 11339,
+        "sha256": "3dfdf1dad83dd46ff5848b9136e74ca7c62b30ee6a29177866c8b3946f315717"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/user/vo/user/UserPageReqVO.java",
+        "bytes": 1440,
+        "sha256": "17b458e6787c2cc043b997b077d51850e10a93b3ae26ecdd39bc97b2877966f1"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/dept/DeptController.java",
+        "bytes": 3997,
+        "sha256": "fd17b2cc63633d5e9389cff1ff17b4453f4ebfa38a1c0011c414264fd1ca73d1"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/dept/PostController.java",
+        "bytes": 5065,
+        "sha256": "6ee724321963d3f9ec7b36b08abf5a2633a1ebb4ac82c3d4134217e3abb30f53"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/dict/DictTypeController.java",
+        "bytes": 5230,
+        "sha256": "02164f308bb8161d4dfaa72b2532e9e82daf253f6f869a5e138dde15b417cdcb"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/dict/DictDataController.java",
+        "bytes": 5329,
+        "sha256": "7cf81cb00cdec83cd6459ee49db4b32fba3ccbb71608705cfdaa2b00a9954134"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/tenant/TenantController.java",
+        "bytes": 6669,
+        "sha256": "3970fcefc4d248d3fe01ddf5d879e0b2bdab2c95248cdfdcfe3b7c0aa6ae3564"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/permission/vo/role/RoleSaveReqVO.java",
+        "bytes": 1980,
+        "sha256": "e878c53d226b5f10dd0821f6e757e3cd5ab76257ba7209be16e5871c74202472"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/permission/vo/menu/MenuSaveVO.java",
+        "bytes": 2635,
+        "sha256": "419e765a4d3af5ed3f1a22ca7c0004ecacd31c989cc20bfb652d2c8cbb580313"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/dict/vo/type/DictTypeSaveReqVO.java",
+        "bytes": 1334,
+        "sha256": "c27eb0118c291457e87b3bf6560d64d7748b06008bb69790f32fe58fa019a14a"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/controller/admin/dict/vo/data/DictDataSaveReqVO.java",
+        "bytes": 2220,
+        "sha256": "542c64813ec908749e2bdcfb9686896329d1ed418c4c364200625ec73e06c12f"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/service/permission/RoleServiceImpl.java",
+        "bytes": 9930,
+        "sha256": "505fb1aef99291f982a863f1a5ab2ec445a8df984cde38db5a2c1b87260cb5d1"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/service/permission/MenuServiceImpl.java",
+        "bytes": 11305,
+        "sha256": "4db624200901441f34afa093e7666775395e2bb09fa9f3663dd7a701917674bb"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/service/permission/PermissionServiceImpl.java",
+        "bytes": 14611,
+        "sha256": "927ac110285156fdb4f52b9dee7fe020672c54edc9f160a302bf19c6326abb61"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/convert/auth/AuthConvert.java",
+        "bytes": 4134,
+        "sha256": "981d36eaf3fc5dce886f498336834d943b513c496dfcc7fdb0424aa03df73615"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/dal/dataobject/permission/MenuDO.java",
+        "bytes": 3007,
+        "sha256": "47d47c322279db4a90b767b275dfbf9d0f4374ddc4938ba82791f7317eb845c5"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/dal/mysql/dict/DictDataMapper.java",
+        "bytes": 2183,
+        "sha256": "5e297123a66b661377e6a40b981bee75adfbffff864c9b11a713d0290cde81db"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/dal/mysql/dict/DictTypeMapper.java",
+        "bytes": 1573,
+        "sha256": "f0f5b570ce98583bf8762dc50dbcf10b0f4991f24490e4271550990fcf764822"
+      },
+      {
+        "path": "yudao-module-system/src/main/java/cn/iocoder/yudao/module/system/service/dict/DictDataServiceImpl.java",
+        "bytes": 6323,
+        "sha256": "4dd9afe5ba1723b50eecd9e48fc57f2ec81d4aa546bac9450de04266c1cd8ec5"
+      },
+      {
+        "path": "yudao-framework/yudao-common/src/main/java/cn/iocoder/yudao/framework/common/util/json/databind/NumberSerializer.java",
+        "bytes": 1253,
+        "sha256": "f4d3596d7c57e134cea4ac8caa94ec6f7c5804082bde142f8a9bcfe196b3b246"
+      },
+      {
+        "path": "yudao-framework/yudao-spring-boot-starter-web/src/main/java/cn/iocoder/yudao/framework/jackson/config/YudaoJacksonAutoConfiguration.java",
+        "bytes": 2954,
+        "sha256": "b85c23a8bd35377a26338a821374f2528553274b0765d2723f34057fab8f4014"
+      }
+    ]
+  },
+  "publication_confirmation": {
+    "status": "user_confirmed",
+    "confirmed_at": "2026-09-23",
+    "confirmed_by": "user",
+    "repository": "https://github.com/cxszn/agent-dev-ruoyi-vue-pro",
+    "scope": "Publication of this plugin integration and its adapted source materials",
+    "basis": "User replied 允许 after being asked to confirm authorization for publication to this repository."
+  }
+}
