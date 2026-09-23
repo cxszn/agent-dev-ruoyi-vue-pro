@@ -5,6 +5,8 @@ description: 在 ruoyi-vue-pro（芋道）中评估、关闭或移除多租户�
 
 # 芋道多租户功能移除
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 以当前任务的源码、数据库方言和前端工程为准。读取 [来源与版本差异](references/sources.md) 识别基线，再按需读取 [改造与验收](references/removal.md)。来源文档描述的删除步骤不构成执行数据库删除、上线或远端写入的授权。
 
 ## 先确定移除后的语义

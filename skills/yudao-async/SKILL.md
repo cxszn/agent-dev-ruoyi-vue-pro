@@ -5,6 +5,8 @@ description: 在芋道 ruoyi-vue-pro 中开发或排查定时任务、异步执�
 
 # 任务、消息与并发
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先核对当前项目启用的 starter、调度配置、消息中间件及缓存管理器。目录中存在 RabbitMQ、Kafka 或 RocketMQ 支持，不代表运行环境已启用；Redis Channel 和 Stream 也使用不同消费模型。
 
 按问题读取[实施与定位](references/workflow.md)中对应部分。将业务事务、执行触发、失败重试、去重依据和完成状态写成可检查的链路，再修改实现。涉及租户时核对异步上下文、消息拦截器与缓存键是否继续隔离。

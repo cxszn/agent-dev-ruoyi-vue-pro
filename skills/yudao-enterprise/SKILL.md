@@ -5,6 +5,8 @@ description: 按业务边界定位和开发芋道 ruoyi-vue-pro 的 ERP 进销�
 
 # 芋道企业业务
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先确定用户描述的业务对象与模块：销售库存/采购走 ERP，客户公海/商机合同走 CRM，生产工单走 MES，仓库作业走 WMS，人事薪资走 HRM，账套凭证走 FMS，项目迭代走 PMS，办公申请走 OA，会话消息走 IM。名称相似的库存、客户、用户或单据不能视为同一实体。
 
 按[企业业务工作路径](references/workflow.md)只读当前任务涉及的入口；核根 POM、模块 POM、server 依赖和相关 API。基线中九模块都默认未启用，不把目录存在视为服务可用。

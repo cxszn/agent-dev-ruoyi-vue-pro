@@ -5,6 +5,8 @@ description: 开发、配置或排查芋道 ruoyi-vue-pro 的文件存储、短�
 
 # 芋道基础能力集成
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先确认当前项目版本、启用模块和调用方，再从[主题流程](references/workflow.md)选择对应章节。源码定位以[来源基线](../../references/source-index.md)为起点，在当前项目重新查找符号；不要把历史行号或目录存在当成运行证据。
 
 优先复用 `infra` 文件服务、`system` 通知与社交服务、框架 Excel/API 日志能力。跨模块调用先找现有 `api` 接口与 DTO，平台配置与客户端实现只在任务涉及该层时加载。

@@ -5,6 +5,8 @@ description: 在芋道 ruoyi-vue-pro 中开发和排查 IoT 产品物模型、�
 
 # 芋道 IoT
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先确认当前根 POM、IoT 三个子模块及运行进程：`iot-biz` 是业务侧，`iot-core` 提供共享契约，`iot-gateway` 有独立启动入口。基线中 IoT 未默认聚合进主服务，单看后台菜单或目录不能确认网关已运行。
 
 读取[IoT 链路与验收](references/workflow.md)，按设备接入、物模型、消息、规则或 OTA 选择入口。定位问题时带上设备身份、协议、消息方向、requestId 与网关 serverId，保留租户来源。配置与证据中的设备密钥应脱敏。

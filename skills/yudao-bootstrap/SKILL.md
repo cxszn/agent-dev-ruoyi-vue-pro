@@ -5,6 +5,8 @@ description: 核对芋道 ruoyi-vue-pro 的 Java与Spring版本、启动配置�
 
 # 芋道启动与模块装配
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 从当前任务的项目根目录工作，先读根 POM、BOM、服务 POM 和启动配置。目录名、历史技能和文档截图都不能代替这些文件的版本证据。按[启动与装配流程](references/workflow.md)定位本次需要的步骤。
 
 - 启动失败：记录实际 JDK/Maven、激活 profile、第一条根因异常和相关配置键，避免直接套用其它分支启动命令。

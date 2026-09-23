@@ -5,6 +5,8 @@ description: 在芋道 ruoyi-vue-pro 中处理 Maven 构建、测试执行、启
 
 # 构建、运行与运维
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先确定问题发生在依赖解析、编译、测试、启动、请求处理还是部署阶段，再读取[操作与证据索引](references/workflow.md)的对应部分。核对实际 JDK/Maven、根与 BOM 版本、启用模块、运行 profile、启动命令和首次失败证据。
 
 源码中的 Dockerfile、Shell 和应用配置是待适配输入。先检查其 Java 运行版本、profile、产物路径及服务停止行为，再用于当前环境。构建或编写部署方案不自动授权替换服务、执行迁移或部署。

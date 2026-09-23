@@ -5,6 +5,8 @@ description: 开发、排查芋道 ruoyi-vue-pro 的商城订单、商品促销�
 
 # 芋道交易、支付与会员
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先从请求确定业务域：渠道接入/收退款在 `pay`；会员账号/积分在 `member`；商品、营销和交易分别在 mall 的 product/promotion/trade 子模块。读取根与 server POM 确认当前启用状态，基线中的这些模块默认被注释。
 
 读取[交易工作路径](references/workflow.md)，按支付回调、订单、售后或积分选择入口。先记录业务单号、支付/退款单号、原状态、金额单位与预期状态，再追 Service、跨模块 API、事务和事件/handler。

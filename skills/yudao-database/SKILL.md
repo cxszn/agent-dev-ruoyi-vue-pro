@@ -5,6 +5,8 @@ description: 处理芋道 SQL 初始化、表结构或全局配置数据升级�
 
 # 芋道数据库
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 用户要求把 MySQL SQL 转成其它数据库格式时，直接转入 [yudao-sql-convert](../yudao-sql-convert/SKILL.md)，使用现有转换器生成文件和检查报告。下面的流程用于 schema、数据或实际数据库迁移。
 
 确认目标数据库类型、当前 schema、来源版本和目标版本；从[数据库流程](../../references/database.md)定位对应方言脚本和重要全局表。先产出可审查的 SQL 差异及影响说明，再按用户授权执行。

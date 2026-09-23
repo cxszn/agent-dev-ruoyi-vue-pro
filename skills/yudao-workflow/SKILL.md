@@ -5,6 +5,8 @@ description: 在芋道 ruoyi-vue-pro 中开发、排查 BPM/Flowable 流程定�
 
 # 芋道流程审批
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先区分模型编辑、定义发布、实例发起、任务处理及业务结果回写；收集 definition key/version、instanceId、taskId、业务单号、操作者与预期状态。根 POM、BPM POM 与 server 依赖决定模块是否启用，基线中 BPM 默认未启用。
 
 读取[BPM 工作路径](references/workflow.md)，沿当前请求对应链路追踪，使用实际权限码、审批人策略和事务边界。设计中的“审批人”要分发起人自选、策略候选人、当前 assignee 与委派/加签参与者。

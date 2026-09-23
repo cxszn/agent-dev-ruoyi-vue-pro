@@ -5,6 +5,8 @@ description: 在芋道 ruoyi-vue-pro 中新增或调整 Java Controller、Servic
 
 # 芋道后端
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 先核对根 POM、`yudao-dependencies/pom.xml`、`yudao-server/pom.xml`，再定位业务模块。[已核验源码基线](../../references/source-index.md)只有 `system` 和 `infra` 默认启用，其它目录存在不代表参与编译或启动。
 
 为同类功能先找 Controller、ReqVO/RespVO、Service、DO、Mapper 和测试；具体定位与权限路径见[后端模式](../../references/backend.md)。按现有分层写最小改动，跨模块调用先查看 `api` 契约。涉及 Spring Boot 4、MyBatis Plus 或依赖细节时，核对当前 POM 与对应版本的一手资料。

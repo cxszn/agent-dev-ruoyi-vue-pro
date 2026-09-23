@@ -34,6 +34,10 @@
 
 插件通过 `.codex-plugin/plugin.json` 声明技能。将仓库作为插件源加入已配置的 Codex marketplace 后，可使用 `codex plugin add dev-ruoyi-vue-pro@<marketplace-name>` 安装；已在个人 marketplace 登记时，名称为 `dev-ruoyi-vue-pro@personal`。
 
+## 开发约定
+
+编写芋道项目或框架代码时，**每个新增方法都必须添加注释**，说明用途及必要的调用约定，覆盖辅助方法、接口、重写方法和生成的源码。具体写法与交付检查见[新增方法注释约定](references/method-comments.md)。
+
 ## 来源与适用范围
 
 [文档导航](references/docs-index.md)收录 27 个分组、382 个目录项，覆盖开发指南、框架与中间件、业务模块、运维和四类前端手册。当前 51 项有已知 URL，331 项的具体 URL 待定位；此前实际读取了 6 页正文，2 页访问受限。本轮浏览器控制连接未恢复，目录依据本任务先前的官网导航记录与当前源码链接整理，不能据此声称所有页面正文都已分析。

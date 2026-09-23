@@ -5,6 +5,8 @@ description: 为芋道 ruoyi-vue-pro 的启动、代码生成、权限、多租�
 
 # 芋道任务入口
 
+涉及芋道项目代码新增方法时，遵守[新增方法注释约定](../../references/method-comments.md)，交付前逐一检查。
+
 1. 用用户指定的项目或当前工作区确定范围，并核对[来源索引](../../references/source-index.md)的适用版本；无法确定目标项目时，先澄清项目范围。目录名不能代替 POM、包文件和实际代码验证。
 2. 记录目标、已知现状、受影响模块、验收与验证；持续任务用[任务与调整模板](../../references/task-template.md)增量修订原任务。
 3. 按任务选用以下一个或多个技能。文档检索先运行 `python scripts/docs_index.py search "关键词" --json`（相对插件根目录），再读取命中的技能；需要完整导航时读取[文档分组索引](../../references/docs-index.md)。只有导航标题或源码链接的条目不能当成正文已读，URL 待定位时通过用户允许的浏览器查找。
